@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useTheme } from '../../Context/ThemeContext';
 import {  FaSun, FaMoon } from 'react-icons/fa';
 
-const Navbar = () => {
+const Menu = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
@@ -41,4 +41,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Menu;
