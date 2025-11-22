@@ -1,4 +1,30 @@
 import { useState } from 'react';
+import { useEffect } from 'react';
+import { apiService } from '../../services/apiService';
+
+useEffect(() => {
+  const fetchDashboardData = async () => {
+    try {
+      const [colabRes, vagasRes, cargosRes] = await Promise.all([
+        apiService.get<any[]>('/colaboradores'),
+        apiService.get<any[]>('/vagas'),
+        apiService.get<any[]>('/cargos')
+      ]);
+
+      setStats({
+        colaboradores: colabRes.length,
+        vagas: vagasRes.length,
+        cargos: cargosRes.length
+      });
+    } catch (error) {
+      console.error("Erro ao carregar dashboard:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  fetchDashboardData();
+}, []);
 
 interface DashboardData {
   colaboradores: number;
