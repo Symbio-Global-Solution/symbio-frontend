@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaUsers, FaBriefcase, FaLayerGroup, FaArrowRight } from 'react-icons/fa';
 import { apiService } from '../../services/apiService'; 
+import logo from '../../assets/symbio-logo.png';
 
 interface DashboardData {
   colaboradores: number;
@@ -46,6 +47,13 @@ const Home = () => {
       <div className="max-w-6xl mx-auto pt-10 pb-20 px-6">
         
         <div className="text-center mb-20 mt-10">
+          
+          <img 
+            src={logo} 
+            alt="Symbio Logo" 
+            className="h-32 mx-auto mb-8 drop-shadow-[0_0_15px_rgba(118,74,149,0.5)] hover:scale-105 transition-transform duration-500"
+          />
+
           <h1 className="font-display text-5xl md:text-7xl font-bold leading-tight mb-6">
             Não espere o futuro. <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-[#B265D9]">
