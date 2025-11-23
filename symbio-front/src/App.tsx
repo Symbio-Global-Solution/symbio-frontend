@@ -1,12 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ThemeProvider } from './Context/ThemeContext';
+import { ThemeProvider } from './context/ThemeContext';
 import Menu from './components/Menu/Menu';
 
 import Home from './pages/Home';
 import Equipe from './pages/Equipe';
 import Faq from './pages/Faq';
-import Sobre from './pages/Sobre';
-import Contato from './pages/Contato';
 
 
 function App() {
@@ -21,8 +19,6 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/equipe" element={<Equipe />} />
               <Route path="/faq" element={<Faq />} />
-              <Route path="/sobre" element={<Sobre/>} />
-              <Route path="/contato" element={<Contato/>} />
             </Routes>
           </main>
           
