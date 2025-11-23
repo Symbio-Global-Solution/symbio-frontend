@@ -131,6 +131,7 @@ src/
 │   └── apiService.ts # Configuração do Fetch e tratamento de CORS
 ├── App.tsx          # Componente Raiz e Roteamento
 └── main.tsx         # Ponto de entrada da aplicação
+```
 
 ## 9. Endpoints e Rotas Principais
 
