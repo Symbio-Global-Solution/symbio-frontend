@@ -10,7 +10,6 @@ const Menu = () => {
       <div className="bg-white/10 dark:bg-black/20 backdrop-blur-lg border border-white/20 shadow-lg rounded-full px-6 py-3 flex items-center justify-between transition-all duration-300">
         
         <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-symbio-purple to-blue-500 rounded-full flex items-center justify-center text-white font-bold">S</div>
             <span className="font-display font-bold text-xl text-gray-800 dark:text-white hidden sm:block">SYMBIO</span>
         </div>
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600 dark:text-gray-300">
