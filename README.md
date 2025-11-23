@@ -86,7 +86,7 @@ npm install
 
 # 4. Execute o projeto em modo de desenvolvimento
 npm run dev
-
+```
 ---
 
 ## 7. Como Usar
