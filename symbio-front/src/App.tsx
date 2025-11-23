@@ -1,10 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ThemeProvider } from './context/ThemeContext';
+import { ThemeProvider } from './Context/ThemeContext';
 import Menu from './components/Menu/Menu';
 
 import Home from './pages/Home';
 import Equipe from './pages/Equipe';
 import Faq from './pages/Faq';
+import Error from './pages/Error';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/equipe" element={<Equipe />} />
               <Route path="/faq" element={<Faq />} />
+              <Route path='/error' element={<Error/>} />
             </Routes>
           </main>
           
