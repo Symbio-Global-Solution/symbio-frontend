@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { useTheme } from "../../context/ThemeContext";
+import { useTheme } from "../../context/ThemeContexts";
 import { FaSun, FaMoon, FaBars, FaTimes } from "react-icons/fa";
 
 const Menu = () => {
