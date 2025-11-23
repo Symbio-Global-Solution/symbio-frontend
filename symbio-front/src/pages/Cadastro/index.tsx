@@ -108,6 +108,7 @@ const CadastroColaborador = () => {
     setAdmissao(colab.dt_admissao);
     setSalario(colab.salario.toString());
     setIdCargo(colab.id_cargo.toString());
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const limparForm = () => {
@@ -127,12 +128,12 @@ const CadastroColaborador = () => {
         
         <div className="mb-12 text-center">
           <h1 className="font-display text-4xl font-bold mb-2">Cadastro de <span className="text-purple-600">Colaboradores</span></h1>
-          <p className="opacity-70">Gestão de Pessoas (CRUD Completo)</p>
+          <p className="opacity-70">Gestão de Pessoas</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           
-          <div className="bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 p-6 rounded-2xl h-fit shadow-lg sticky top-24">
+          <div className="bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 p-6 rounded-2xl h-fit shadow-lg relative lg:sticky lg:top-24">
             <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
               {idEdicao ? <FaSync className="text-yellow-500" /> : <FaUserPlus className="text-purple-500" />} 
               {idEdicao ? 'Editar Dados' : 'Novo Colaborador'}
@@ -174,7 +175,7 @@ const CadastroColaborador = () => {
                     type="date" 
                     value={dt_admissao}
                     onChange={e => setAdmissao(e.target.value)}
-                    className="w-full bg-gray-100 dark:bg-black/40 border border-gray-300 dark:border-white/10 rounded-lg px-2 py-2 focus:ring-2 focus:ring-purple-500 outline-none text-sm"
+                    className="w-full bg-gray-100 dark:bg-black/40 border border-gray-300 dark:border-white/10 rounded-lg px-2 py-2 focus:ring-2 focus:ring-purple-500 outline-none text-sm dark:scheme-dark"
                     required
                   />
                 </div>
@@ -255,78 +256,78 @@ const CadastroColaborador = () => {
           </div>
 
           <div className="lg:col-span-2 space-y-4">
-             
-             <div className="flex justify-between items-center mb-2 px-2">
+              
+              <div className="flex justify-between items-center mb-2 px-2">
                 <h2 className="text-xl font-bold flex items-center gap-2">
                   <FaUserTie className="text-purple-500" /> Colaboradores Cadastrados
                 </h2>
                 <span className="bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-300 px-3 py-1 rounded-full text-sm font-bold">
                   {colaboradores.length}
                 </span>
-             </div>
-
-             {loading ? (
-              <div className="text-center py-20 opacity-50 animate-pulse">Sincronizando banco de dados...</div>
-            ) : colaboradores.length === 0 ? (
-              <div className="text-center p-12 border-2 border-dashed border-gray-300 dark:border-white/10 rounded-2xl opacity-60">
-                <p className="text-lg mb-2">Nenhum colaborador encontrado.</p>
-                <p className="text-sm">Use o formulário para cadastrar sua equipe.</p>
               </div>
-            ) : (
-              <div className="grid gap-4">
-                {colaboradores.map((colab) => (
-                  <div key={colab.id_colaborador} className="bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 p-5 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-purple-500/50 transition-all shadow-sm group">
-                    
-                    <div className="flex-1">
-                      <div className="flex justify-between items-start">
-                        <h3 className="font-bold text-lg text-gray-800 dark:text-white group-hover:text-purple-600 transition-colors">
-                            {colab.nm_colaborador}
-                        </h3>
-                        <span className="text-[10px] font-mono opacity-40 border border-gray-300 dark:border-white/10 px-1.5 py-0.5 rounded">
-                            ID: {colab.id_colaborador}
-                        </span>
-                      </div>
+
+              {loading ? (
+                <div className="text-center py-20 opacity-50 animate-pulse">Sincronizando banco de dados...</div>
+              ) : colaboradores.length === 0 ? (
+                <div className="text-center p-12 border-2 border-dashed border-gray-300 dark:border-white/10 rounded-2xl opacity-60">
+                  <p className="text-lg mb-2">Nenhum colaborador encontrado.</p>
+                  <p className="text-sm">Use o formulário para cadastrar sua equipe.</p>
+                </div>
+              ) : (
+                <div className="grid gap-4">
+                  {colaboradores.map((colab) => (
+                    <div key={colab.id_colaborador} className="bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 p-5 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-purple-500/50 transition-all shadow-sm group">
                       
-                      <p className="text-sm text-gray-500 dark:text-gray-400 flex items-center gap-2 mb-2">
-                        <FaEnvelope size={12} /> {colab.ds_email}
-                      </p>
-                      
-                      <div className="flex flex-wrap gap-3 text-xs font-medium text-gray-500 dark:text-gray-400 mt-2">
-                        <span className="bg-gray-100 dark:bg-white/5 px-2 py-1 rounded flex items-center gap-1">
-                            <FaCalendarAlt /> {colab.dt_admissao}
-                        </span>
-                        <span className="bg-gray-100 dark:bg-white/5 px-2 py-1 rounded flex items-center gap-1">
-                            <FaMoneyBillWave /> R$ {colab.salario}
-                        </span>
+                      <div className="flex-1">
+                        <div className="flex justify-between items-start">
+                          <h3 className="font-bold text-lg text-gray-800 dark:text-white group-hover:text-purple-600 transition-colors">
+                              {colab.nm_colaborador}
+                          </h3>
+                          <span className="text-[10px] font-mono opacity-40 border border-gray-300 dark:border-white/10 px-1.5 py-0.5 rounded">
+                              ID: {colab.id_colaborador}
+                          </span>
+                        </div>
                         
-                        <span className="bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-300 px-2 py-1 rounded flex items-center gap-1">
-                            <FaIdBadge /> 
-                            {cargosDisponiveis.find(c => c.id === colab.id_cargo)?.nome || `Cargo ID: ${colab.id_cargo}`}
-                        </span>
+                        <p className="text-sm text-gray-500 dark:text-gray-400 flex items-center gap-2 mb-2">
+                          <FaEnvelope size={12} /> {colab.ds_email}
+                        </p>
+                        
+                        <div className="flex flex-wrap gap-3 text-xs font-medium text-gray-500 dark:text-gray-400 mt-2">
+                          <span className="bg-gray-100 dark:bg-white/5 px-2 py-1 rounded flex items-center gap-1">
+                              <FaCalendarAlt /> {colab.dt_admissao}
+                          </span>
+                          <span className="bg-gray-100 dark:bg-white/5 px-2 py-1 rounded flex items-center gap-1">
+                              <FaMoneyBillWave /> R$ {colab.salario}
+                          </span>
+                          
+                          <span className="bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-300 px-2 py-1 rounded flex items-center gap-1">
+                              <FaIdBadge /> 
+                              {cargosDisponiveis.find(c => c.id === colab.id_cargo)?.nome || `Cargo ID: ${colab.id_cargo}`}
+                          </span>
+                        </div>
                       </div>
-                    </div>
-                    
-                    <div className="flex items-center gap-2 border-t sm:border-t-0 pt-4 sm:pt-0 border-gray-200 dark:border-white/10">
-                      <button 
-                        onClick={() => handleEdit(colab)}
-                        className="p-3 text-yellow-600 dark:text-yellow-500 hover:bg-yellow-500/10 rounded-full transition-colors"
-                        title="Editar"
-                      >
-                        <FaEdit />
-                      </button>
-                      <button 
-                        onClick={() => handleDelete(colab.id_colaborador)}
-                        className="p-3 text-red-500 hover:bg-red-500/10 rounded-full transition-colors"
-                        title="Excluir"
-                      >
-                        <FaTrash />
-                      </button>
-                    </div>
+                      
+                      <div className="flex items-center gap-2 border-t sm:border-t-0 pt-4 sm:pt-0 border-gray-200 dark:border-white/10">
+                        <button 
+                          onClick={() => handleEdit(colab)}
+                          className="p-3 text-yellow-600 dark:text-yellow-500 hover:bg-yellow-500/10 rounded-full transition-colors"
+                          title="Editar"
+                        >
+                          <FaEdit />
+                        </button>
+                        <button 
+                          onClick={() => handleDelete(colab.id_colaborador)}
+                          className="p-3 text-red-500 hover:bg-red-500/10 rounded-full transition-colors"
+                          title="Excluir"
+                        >
+                          <FaTrash />
+                        </button>
+                      </div>
 
-                  </div>
-                ))}
-              </div>
-            )}
+                    </div>
+                  ))}
+                </div>
+              )}
           </div>
 
         </div>

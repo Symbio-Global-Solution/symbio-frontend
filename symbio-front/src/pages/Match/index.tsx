@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { apiService } from '../../services/apiService';
 import Menu from '../../components/Menu/Menu'; 
 import { FaRobot, FaCheckCircle, FaExclamationTriangle, FaSearch, FaSpinner } from 'react-icons/fa';
+import logo from '../../assets/symbio-logo.png';
 
 interface SimpleData {
   id: number;
@@ -142,10 +143,14 @@ const Match = () => {
       <div className="max-w-3xl w-full mt-6">
         
         <div className="text-center mb-10 animate-fade-in">
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-purple-600/10 dark:bg-purple-600/20 rounded-full mb-4 shadow-[0_0_20px_rgba(124,58,237,0.3)] ring-1 ring-purple-500/30">
-            <FaRobot className="text-4xl text-purple-600 dark:text-purple-400" />
-          </div>
-          <h1 className="font-display text-4xl font-bold mb-2 tracking-tight">IA Match Analysis</h1>
+         
+<img 
+            src={logo} 
+            alt="Symbio Logo" 
+            className="h-32 mx-auto mb-8 drop-shadow-[0_0_15px_rgba(118,74,149,0.5)] hover:scale-105 transition-transform duration-500"
+          />
+
+          <h1 className="font-display text-4xl font-bold mb-2 tracking-tight">Match Corporativo</h1>
           <p className="text-gray-500 dark:text-gray-400">Selecione os parâmetros para a IA calcular a aderência.</p>
           
           {usingMock && !initialLoading && (
