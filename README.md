@@ -94,7 +94,7 @@ npm run dev
 ### 🔗 Acesso ao Projeto (Deploy)
 Acesse a aplicação rodando em produção através do link abaixo:
 
-👉 **[CLIQUE AQUI PARA ACESSAR O SYMBIO (VERCEL)](INSIRA_SEU_LINK_VERCEL_AQUI)**
+👉 **[CLIQUE AQUI PARA ACESSAR O SYMBIO (VERCEL)](https://symbio-react.vercel.app/)**
 
 ### Guia de Uso:
 1.  **Home:** * Ao acessar, você verá o *Dashboard* com métricas gerais (Total de Colaboradores, Vagas abertas e Cargos mapeados).
@@ -156,7 +156,7 @@ A aplicação consome a API RESTful hospedada no Render. Os principais recursos 
 
 ## 10. Autores e Créditos
 
-Integrantes do grupo (Turma **[INSIRA_SUA_TURMA]**):
+Integrantes do grupo (Turma **[1TDSPF]**):
 
 | Foto | Nome | RM | Turma | Links |
 | :---: | :--- | :--- | :--- | :--- |
@@ -184,7 +184,7 @@ Para dúvidas ou avaliação, consulte os links oficiais da entrega:
 
 * **Repositório Frontend (GitHub):** [https://github.com/Symbio-Global-Solution/symbio-frontend.git]
 * **Vídeo Pitch/Demo (YouTube):** [https://www.youtube.com/watch?v=CDD27nGvpE4]
-* **Deploy (Vercel):** [INSIRA_SEU_LINK_VERCEL_AQUI]
+* **Deploy (Vercel):** [https://symbio-react.vercel.app/]
 
 ---
 © 2025 SYMBIO - FIAP Global Solution. Todos os direitos reservados.
