@@ -334,3 +334,5 @@ const CadastroColaborador = () => {
     </div>
   );
 };
+
+export default CadastroColaborador;
