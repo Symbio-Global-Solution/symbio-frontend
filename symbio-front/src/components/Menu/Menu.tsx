@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useTheme } from '../../Context/ThemeContext';
+import { useTheme } from '../../context/ThemeContext';
 import {  FaSun, FaMoon } from 'react-icons/fa';
 
 const Menu = () => {
