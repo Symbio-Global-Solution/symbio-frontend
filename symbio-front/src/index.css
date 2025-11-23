@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 @import url('https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap');
 
@@ -5,10 +6,10 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: 'Inter', sans-serif;
-  @apply bg-symbio-light text-gray-900 dark:bg-symbio-dark dark:text-white transition-colors duration-300;
-  overflow-x: hidden;
+@layer base {
+  body {
+    @apply bg-symbio-light text-gray-900 dark:bg-symbio-dark dark:text-white transition-colors duration-300 font-sans;
+  }
 }
 
 @layer components {
@@ -18,9 +19,5 @@ body {
   
   .glass-dark {
     @apply bg-black/20 backdrop-blur-lg border border-white/10 shadow-lg;
-  }
-
-  .btn-primary {
-    @apply bg-symbio-purple hover:bg-purple-700 text-white font-bold py-2 px-6 rounded-full transition-all shadow-neon hover:scale-105;
   }
 }
