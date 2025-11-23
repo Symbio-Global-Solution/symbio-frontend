@@ -1,18 +1,21 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ThemeProvider } from './Context/ThemeContext';
+import { ThemeProvider } from './context/ThemeContext'; 
 import Menu from './components/Menu/Menu';
+import Footer from './components/Rodape/Rodape'; 
 
+// Importação das Páginas
 import Home from './pages/Home';
 import Equipe from './pages/Equipe';
 import Faq from './pages/Faq';
-import Error from './pages/Error';
-
+import Sobre from './pages/Sobre';  
+import Error from './pages/Error';   
 
 function App() {
   return (
     <ThemeProvider>
       <Router>
-        <div className="min-h-screen flex flex-col font-sans selection:bg-symbio-purple selection:text-white">
+        <div className="min-h-screen flex flex-col font-sans selection:bg-symbio-purple selection:text-white bg-symbio-light dark:bg-symbio-dark transition-colors duration-300">
+          
           <Menu />
           
           <main className="flex-grow pt-28 px-4">
@@ -20,9 +23,13 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/equipe" element={<Equipe />} />
               <Route path="/faq" element={<Faq />} />
-              <Route path='/error' element={<Error/>} />
+              <Route path="/sobre" element={<Sobre />} />
+              
+              <Route path="*" element={<Error />} />
             </Routes>
           </main>
+
+          <Footer />
           
         </div>
       </Router>
