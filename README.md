@@ -160,8 +160,8 @@ Integrantes do grupo (Turma **[INSIRA_SUA_TURMA]**):
 
 | Foto | Nome | RM | Turma | Links |
 | :---: | :--- | :--- | :--- | :--- |
-| <img src="https://github.com/hrqmartins.png" width="50" style="border-radius:50%"/> | **[Henrique Martins]** | [RM563620] | [1TDSPF] | [LinkedIn](https://www.linkedin.com/in/hrqmartins) \| [GitHub](https://github.com/hrqmartins) |
-| <img src="https://github.com/HenriqueTCesar.png" width="50" style="border-radius:50%"/> | **[Henrique Teixeira]** | [RM563088] | [1TDSPF] | [LinkedIn](https://www.linkedin.com/in/henriquecesarr) \| [GitHub](https://github.com/HenriqueTCesar) |
+| <img src="https://github.com/hrqmartins.png" width="50" style="border-radius:50%"/> | **Henrique Martins** | RM563620 | 1TDSPF | [LinkedIn](https://www.linkedin.com/in/hrqmartins) \| [GitHub](https://github.com/hrqmartins) |
+| <img src="https://github.com/HenriqueTCesar.png" width="50" style="border-radius:50%"/> | **Henrique Teixeira** | RM563088 | 1TDSPF | [LinkedIn](https://www.linkedin.com/in/henriquecesarr) \| [GitHub](https://github.com/HenriqueTCesar) |
 
 ---
 
