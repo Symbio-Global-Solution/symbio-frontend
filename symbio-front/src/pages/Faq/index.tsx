@@ -83,7 +83,51 @@ return (
           </div>
         </div>
 
-        
+        <div className="lg:col-span-1">
+          <div className="bg-symbio-purple/10 border border-symbio-purple/30 rounded-2xl p-8 sticky top-32 backdrop-blur-md">
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Ainda precisa de ajuda?</h3>
+            <p className="text-gray-500 dark:text-gray-400 mb-8 text-sm">
+              Nossa equipe de suporte técnico está disponível para auxiliar na integração da plataforma.
+            </p>
+
+            <div className="space-y-6">
+              <div className="flex items-center gap-4">
+                <div className="w-10 h-10 rounded-full bg-symbio-purple flex items-center justify-center text-white shadow-lg shadow-symbio-purple/30">
+                  <FaEnvelope />
+                </div>
+                <div>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 uppercase font-bold">Email</p>
+                  <a href="mailto:suporte@symbio.com" className="text-gray-800 dark:text-white hover:text-symbio-purple transition-colors font-medium">suporte@symbio.com</a>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="w-10 h-10 rounded-full bg-green-600 flex items-center justify-center text-white shadow-lg shadow-green-600/30">
+                  <FaWhatsapp />
+                </div>
+                <div>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 uppercase font-bold">WhatsApp</p>
+                  <a href="#" className="text-gray-800 dark:text-white hover:text-green-500 transition-colors font-medium">+55 (11) 99999-9999</a>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white shadow-lg shadow-blue-600/30">
+                  <FaMapMarkerAlt />
+                </div>
+                <div>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 uppercase font-bold">Escritório</p>
+                  <p className="text-gray-800 dark:text-white text-sm font-medium">Av. Paulista, 1106 - SP</p>
+                </div>
+              </div>
+            </div>
+
+            <button className="w-full mt-8 py-3 bg-symbio-purple hover:bg-purple-700 text-white rounded-xl font-bold transition-all shadow-lg hover:shadow-symbio-purple/25 transform hover:-translate-y-1">
+              Abrir Chamado
+            </button>
+
+          </div>
+        </div>
 
       </div>
       
