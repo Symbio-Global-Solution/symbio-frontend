@@ -8,7 +8,11 @@ import Home from './pages/Home';
 import Equipe from './pages/Equipe';
 import Faq from './pages/Faq';
 import Sobre from './pages/Sobre';  
-import Error from './pages/Error';   
+import Error from './pages/Error';
+import Match from './pages/Match';
+import Cadastro from './pages/Cadastro';
+
+
 
 function App() {
   return (
@@ -24,8 +28,9 @@ function App() {
               <Route path="/equipe" element={<Equipe />} />
               <Route path="/faq" element={<Faq />} />
               <Route path="/sobre" element={<Sobre />} />
-              
               <Route path="*" element={<Error />} />
+              <Route path='/match' element={<Match />} />
+              <Route path='/cadastro' element={<Cadastro />} />
             </Routes>
           </main>
 
